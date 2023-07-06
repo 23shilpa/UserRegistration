@@ -127,7 +127,7 @@ import java.util.regex.Pattern;
             Scanner sc = new Scanner(System.in);
             System.out.println("Enter SpecialCharacter");
             String SpecialCharacter = sc.nextLine();
-            
+
             Matcher matcher = pattern.matcher(SpecialCharacter);
             if (matcher.matches()) {
                 System.out.println("Valid SpecialCharacter");
