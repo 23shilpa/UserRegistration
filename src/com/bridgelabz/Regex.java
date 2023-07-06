@@ -66,26 +66,41 @@ import java.util.regex.Pattern;
             Matcher matcher = pattern.matcher(MobileNo);
             if (matcher.matches()) {
                 System.out.println("Valid Mobile Number");
-            }
-            else {
+            } else {
                 System.out.println("Mobile Number is Invalid");
 
             }
         }
 
         //UC5
-        public void validPassword(){
-            Pattern pattern=Pattern.compile("^[a-z]{8,}$");
+        public void validPassword() {
+            Pattern pattern = Pattern.compile("^[a-z]{8,}$");
             Scanner sc = new Scanner(System.in);
             System.out.println("Enter Password ");
-            String password=sc.nextLine();
+            String password = sc.nextLine();
 
             Matcher matcher = pattern.matcher(password);
-            if (matcher.matches()){
+            if (matcher.matches()) {
                 System.out.println("Valid Password ");
-            }else {
+            } else {
                 System.out.println("Password is not Valid");
             }
         }
 
-    }
+        //UC6
+        public void validUppercase() {
+            Pattern pattern = Pattern.compile("\"[ A-Za-z] \"");
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Enter Uppercase");
+            String uppercase = sc.nextLine();
+
+            CharSequence Uppercase = null;
+            Matcher matcher = pattern.matcher(Uppercase);
+            if (matcher.matches()) {
+                System.out.println("Valid Uppercase");
+            } else {
+                System.out.println("Uppercase is not Valid");
+            }
+            }
+        }
+
