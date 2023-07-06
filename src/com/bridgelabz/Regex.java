@@ -73,5 +73,19 @@ import java.util.regex.Pattern;
             }
         }
 
+        //UC5
+        public void validPassword(){
+            Pattern pattern=Pattern.compile("^[a-z]{8,}$");
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Enter Password ");
+            String password=sc.nextLine();
+
+            Matcher matcher = pattern.matcher(password);
+            if (matcher.matches()){
+                System.out.println("Valid Password ");
+            }else {
+                System.out.println("Password is not Valid");
+            }
+        }
 
     }
