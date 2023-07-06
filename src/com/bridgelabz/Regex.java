@@ -19,4 +19,22 @@ public class Regex {
             System.out.println("Invalid");
         }
     }
+
+
+
+
+    public void validLastName() {
+        Pattern pattern = Pattern.compile("[a-b]+[A-Z][0-9]\"");
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the Last Name");
+        String FirstName = scanner.nextLine();
+
+        Matcher matcher = pattern.matcher(FirstName);
+        if(matcher.matches()){
+            System.out.println("Last Name is Valid");
+        }
+        else {
+            System.out.println("Invalid");
+        }
+    }
 }
