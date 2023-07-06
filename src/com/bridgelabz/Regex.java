@@ -101,7 +101,7 @@ import java.util.regex.Pattern;
             } else {
                 System.out.println("Uppercase is not Valid");
             }
-            }
+        }
 
         //UC7
         public CharSequence validNumericNumber() {
@@ -115,8 +115,24 @@ import java.util.regex.Pattern;
                 System.out.println("Valid numeric Number");
             } else {
                 System.out.println("numeric number is not Valid");
-        }
+            }
             return null;
         }
-    }
 
+
+        //UC8
+
+        public void validSpecialCharacter() {
+            Pattern pattern = Pattern.compile("[.,:;\\'!@#$%^&*_+=|(){}[?\\-\\]\\/\\\\])/g ");
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Enter SpecialCharacter");
+            String SpecialCharacter = sc.nextLine();
+            
+            Matcher matcher = pattern.matcher(SpecialCharacter);
+            if (matcher.matches()) {
+                System.out.println("Valid SpecialCharacter");
+            } else {
+                System.out.println("SpecialCharacter is not Valid");
+            }
+        }
+    }
