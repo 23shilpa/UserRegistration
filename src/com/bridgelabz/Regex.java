@@ -89,7 +89,7 @@ import java.util.regex.Pattern;
 
         //UC6
         public void validUppercase() {
-            Pattern pattern = Pattern.compile("\"[ A-Za-z] \"");
+            Pattern pattern = Pattern.compile("\"[ A-Z] \"");
             Scanner sc = new Scanner(System.in);
             System.out.println("Enter Uppercase");
             String uppercase = sc.nextLine();
@@ -102,5 +102,21 @@ import java.util.regex.Pattern;
                 System.out.println("Uppercase is not Valid");
             }
             }
+
+        //UC7
+        public CharSequence validNumericNumber() {
+            Pattern pattern = Pattern.compile("\"^[1-9][0-9]*$\"");
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Enter a valid numeric number");
+            String numericNumber = sc.nextLine();
+
+            Matcher matcher = pattern.matcher(validNumericNumber());
+            if (matcher.matches()) {
+                System.out.println("Valid numeric Number");
+            } else {
+                System.out.println("numeric number is not Valid");
         }
+            return null;
+        }
+    }
 
